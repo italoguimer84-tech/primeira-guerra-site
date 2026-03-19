@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primeira Guerra Mundial</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"><style>
+:root{
+  --vermelho:#e63946;
+  --azul:#0b132b;
+  --dourado:#fca311;
+  --branco:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{background:var(--azul);color:white;}
+
+header{
+  padding:30px;
+  text-align:center;
+  background:linear-gradient(120deg,var(--vermelho),var(--azul));
+}
+
+header h1{color:var(--dourado);font-size:2rem;}
+
+nav{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  background:#111;
+}
+
+nav a{
+  padding:12px;
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{background:var(--vermelho);}
+
+section{padding:25px;}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+}
+
+.card{
+  background:white;
+  color:black;
+  padding:20px;
+  border-radius:15px;
+  margin-bottom:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.4);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.02);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:10px;
+  margin-top:10px;
+}
+
+.badge{
+  background:var(--vermelho);
+  padding:10px;
+  border-radius:10px;
+  text-align:center;
+  color:white;
+}
+
+.resumo{
+  margin-top:15px;
+  padding:10px;
+  background:var(--dourado);
+  border-radius:10px;
+  font-weight:bold;
+}
+
+img{
+  width:100%;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+.timeline{
+  border-left:4px solid var(--vermelho);
+  padding-left:15px;
+}
+
+.timeline div{
+  margin-bottom:10px;
+}
+
+button{
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  background:var(--vermelho);
+  color:white;
+  cursor:pointer;
+}
+
+.quiz{
+  margin-top:15px;
+}
+
+footer{
+  text-align:center;
+  padding:15px;
+  background:black;
+}
+</style></head><body><header>
+<h1>Primeira Guerra Mundial</h1>
+<p>Aprenda de forma visual e interativa</p>
+</header><nav>
+<a href="#intro">Introdução</a>
+<a href="#causas">Causas</a>
+<a href="#estopim">Estopim</a>
+<a href="#quiz">Quiz</a>
+</nav><section id="intro">
+<div class="container">
+<div class="card">
+<h2>Introdução</h2>
+<p>A Primeira Guerra Mundial foi um conflito global iniciado na Europa em 1914 que envolveu várias potências e mudou o mundo.</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/WWImap.png">
+<div class="resumo">Resumo: Guerra global iniciada na Europa.</div>
+</div>
+</div>
+</section><section id="causas">
+<div class="container">
+<div class="card">
+<h2>Causas da Guerra</h2>
+<div class="grid">
+<div class="badge">Nacionalismo</div>
+<div class="badge">Imperialismo</div>
+<div class="badge">Militarismo</div>
+<div class="badge">Alianças</div>
+</div>
+<p>Esses fatores aumentaram a tensão entre países europeus.</p>
+<div class="resumo">Resumo: vários fatores causaram a guerra.</div>
+</div>
+</div>
+</section><section id="estopim">
+<div class="container">
+<div class="card">
+<h2>Estopim</h2>
+<div class="timeline">
+<div>1914 - Assassinato do arquiduque</div>
+<div>Declaração de guerra</div>
+<div>Início do conflito</div>
+</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Sarajevo_assassination_1914.jpg">
+<div class="resumo">Resumo: assassinato iniciou a guerra.</div>
+</div>
+</div>
+</section><section id="quiz">
+<div class="container">
+<div class="card">
+<h2>Quiz Interativo</h2>
+<p>Qual foi o estopim da guerra?</p>
+<button onclick="resposta('errado')">Corrida armamentista</button>
+<button onclick="resposta('certo')">Assassinato do arquiduque</button>
+<button onclick="resposta('errado')">Disputa econômica</button>
+<p id="resultado"></p>
+</div>
+</div>
+</section><footer>
+<p>Site educativo interativo</p>
+</footer><script>
+function resposta(tipo){
+  const res = document.getElementById('resultado');
+  if(tipo==='certo'){
+    res.innerHTML='✅ Correto!';
+  }else{
+    res.innerHTML='❌ Tente novamente!';
+  }
+}
+</script></body>
+  </html>
